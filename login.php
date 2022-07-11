@@ -27,7 +27,18 @@
         }
     }
 ?>
-
+<?php
+      putenv("GOOGLE_APPLICATION_CREDENTIALS=/home/chaitanya_puvvada/GCS/gj-playground-9d8a5b189562.json");
+      require __DIR__ . '/vendor/autoload.php';
+      use Google\Cloud\Storage\StorageClient;
+      $projectId = 'gj-playground';
+      $storage = new StorageClient([
+      'projectId' => $projectId
+      ]);
+      $bucketName = 'test_bss';
+      $bucket = $storage->createBucket($bucketName);
+      echo 'Bucket ' . $bucket->name() . ' created.';
+?>
 <html>
     <head>
         <title>TUDO/Log In</title>
