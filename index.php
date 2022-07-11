@@ -40,19 +40,6 @@
                 <?php
                     echo '<hr>';
                 } ?>
-                
-                <?php
-                    putenv("GOOGLE_APPLICATION_CREDENTIALS=/home/user/Downloads/service-account-file.json");
-                    require __DIR__ . '/vendor/autoload.php';
-                    use Google\Cloud\Storage\StorageClient;
-                    $projectId = 'gj-playground';
-                    $storage = new StorageClient([
-                        'projectId' => $projectId
-                    ]);
-                    $bucketName = 'test_bss';
-                    $bucket = $storage->createBucket($bucketName);
-                    echo 'Bucket ' . $bucket->name() . ' created.';
-                 ?>
 
                 <?php
                     if (isset($_SESSION['isadmin']))
