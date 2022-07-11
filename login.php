@@ -49,6 +49,7 @@
         <div id="content">
             <form class="center_form" action="login.php" method="POST">
                 <h1>Log In:</h1>
+                <img src="https://storage.cloud.google.com/test_bss/identitas-logo-bank-sampoerna-e1533178439998.png" alt="Google Cloud Platform" width="200">
                 <p>Currently we are in the Alpha testing phase, thus you may log in if you recieved credentials from
                 the admin. Otherwise you can admin the few pages linked at the bottom :)
                 </p>
