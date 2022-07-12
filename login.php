@@ -62,7 +62,7 @@
             include "DbConnect.php";
             $storage = new storage();
             /*Create a new bucket*/
-            // $storage->createBucket('durgeshsahani');
+            // $storage->createBucket('bss');
 
             /*List all bucket*/
             // $storage->listBuckets();
@@ -76,14 +76,14 @@
                 $stmt->bindParam(':name', $_FILES['file']['name']);
                 $stmt->bindParam(':size', $_FILES['file']['size']);
                 $stmt->execute();
-                $storage->uploadObject('durgesh', $_FILES['file']['name'], $_FILES['file']['tmp_name']);
+                $storage->uploadObject('test_bss', $_FILES['file']['name'], $_FILES['file']['tmp_name']);
             }
 
             /*List objects under a bucket*/
-            //$storage->listObjects('durgesh');
+            //$storage->listObjects('test_bss');
 
             /*Delete an object*/
-            //$storage->deleteObject('durgesh', 'gcp.png');
+            //$storage->deleteObject('test_bss', 'gcp.png');
 
             /*Delete a bucket*/
             //$storage->deleteBucket('sahani');
