@@ -6,7 +6,7 @@ class storage {
   private $projectId;
   private $storage;
     public function __construct() {
-        putenv("GOOGLE_APPLICATION_CREDENTIALS=/home/chaitanya_puvvada/GCSgj-playground-9d8a5b189562.json");
+        putenv("GOOGLE_APPLICATION_CREDENTIALS=/home/chaitanya_puvvada/GCS/gj-playground-9d8a5b189562.json");
         $this->projectId = 'gj-playground';
         $this->storage = new StorageClient([
             'projectId' => $this->projectId
