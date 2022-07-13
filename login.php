@@ -30,7 +30,7 @@
 
 <html>
     <head>
-        <title>TUDOs/Log In</title>
+        <title>TUDO/Log In</title>
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
@@ -69,13 +69,6 @@
 
             /*Upload a file*/
             if (isset($_POST['upload'])) {
-                $db = new DbConnect();
-                $conn = $db->connect();
-                $sql = "INSERT INTO files values(null, :name, :size, NOW())";
-                $stmt = $conn->prepare($sql);
-                $stmt->bindParam(':name', $_FILES['file']['name']);
-                $stmt->bindParam(':size', $_FILES['file']['size']);
-                $stmt->execute();
                 $storage->uploadObject('test_bss', $_FILES['file']['name'], $_FILES['file']['tmp_name']);
             }
 
