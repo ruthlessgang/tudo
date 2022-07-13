@@ -30,7 +30,7 @@
 
 <html>
     <head>
-        <title>TUDO/Log In</title>
+        <title>TUDOs/Log In</title>
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
